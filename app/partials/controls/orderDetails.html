@@ -14,12 +14,15 @@
                     <input class="form-control" name="orderid" ng-disabled='currentOrder.autoID' type='text' ng-model="currentOrder.ExternalID"
                            required ui-mask="{{currentOrder.autoID ? null : user.Company.POIDMask}}"></input>
                         <span ng-if="user.Permissions.contains('AllowAutoGenPOID')" class="input-group-addon">
-                            <input type='checkbox' ng-click="currentOrder.ExternalID = currentOrder.autoID ? null : 'auto'" ng-model='currentOrder.autoID' />
+                            <!-- 'Auto ID' checkbox -->
+                            <input type='checkbox' ng-click="currentOrder.ExternalID = currentOrder.autoID ? null : 'auto'" ng-model='currentOrder.autoID' checked />
                         </span>
+                    <!-- 'Auto ID' text -->
                     <span class="input-group-addon" ng-show="user.Permissions.contains('AllowAutoGenPOID')">{{('Auto' | r) + ' ' + ('ID' | r) | xlat}}</span>
                     <i class="fa">#</i>
                 </div>
             </div>
+
             <div class="view-form-icon" ng-if="user.Permissions.contains('Comments')">
                 <div>
                     <label ng-show="currentOrder.Comments">{{'Comments' | r | xlat}}:</label>
@@ -27,6 +30,7 @@
                     <i class="fa fa-edit"></i>
                 </div>
             </div>
+            
             <div class="view-form-icon" ng-show="user.Permissions.contains('CostCenterPerOrder') && !user.Permissions.contains('CostCenterPerLine') && user.CostCenters.length > 0 || user.Permissions.contains('CostCenterPerOrder') && user.Permissions.contains('FreeFormCostCenter')">
                 <div ng-class="{'view-form-select': !currentOrder.CostCenter && user.CostCenters.length > 1, '': currentOrder.CostCenter }">
                     <label class="required">{{'Cost Center' | r | xlat}}</label>
@@ -40,6 +44,7 @@
                     <i class="fa fa-arrow-down" ng-show="user.CostCenters.length > 1 && !user.Permissions.contains('FreeFormCostCenter')"></i>
                 </div>
             </div>
+
             <div ng-show="currentOrder.OrderFields">
                 <hr />
                 <div ng-repeat="field in currentOrder.OrderFields">
