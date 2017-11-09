@@ -330,7 +330,7 @@ hr {
   margin-top: 20px;
   margin-bottom: 20px;
   border: 0;
-  border-top: 1px solid #ffffff;
+  border-top: 1px solid #f0f0f0;
 }
 .sr-only {
   position: absolute;
@@ -1986,6 +1986,12 @@ select[multiple].input-lg {
   top: 0;
   right: 5px;
 }
+.checkoutbutton {
+    opacity: 0.6;
+}
+.checkoutbutton:hover {
+    opacity: 0.9;
+}
 .btn {
   display: inline-block;
   margin-bottom: 0;
@@ -2202,6 +2208,7 @@ fieldset[disabled] .btn-info.active {
   color: #ffffff;
   background-color: #f0ad4e;
   border-color: #eea236;
+  opacity: 0.6;
 }
 .btn-warning:hover,
 .btn-warning:focus,
@@ -2211,11 +2218,13 @@ fieldset[disabled] .btn-info.active {
   color: #ffffff;
   background-color: #ed9c28;
   border-color: #d58512;
+  opacity: 0.6;
 }
 .btn-warning:active,
 .btn-warning.active,
 .open .dropdown-toggle.btn-warning {
   background-image: none;
+  opacity: 0.6;
 }
 .btn-warning.disabled,
 .btn-warning[disabled],
@@ -3496,7 +3505,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav .open > a:hover,
 .nav .open > a:focus {
   background-color: #eeeeee;
-  border-color: #0c2a3a;
+  border-color: #FFFFFF;
 }
 .nav .nav-divider {
   height: 1px;
@@ -3975,7 +3984,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-default {
   background-color: #50acdb;
-  border-color: #359fd5;
+  border-color: #F0F0F0;
 }
 .navbar-default .navbar-brand {
   color: #ffffff;
@@ -4009,7 +4018,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   background-color: transparent;
 }
 .navbar-default .navbar-toggle {
-  border-color: #dddddd;
+  border-color: #F0F0F0;
 }
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
@@ -6469,9 +6478,14 @@ button::-moz-focus-inner {
   margin-top: 15px;
   font-weight: bold;
 }
+
+.nav ul li span.text-primary,span.ng-binding {
+  margin-top: 0;
+}
+
 .nav ul li span i {
-  font-size: 18px;
-  padding: 15px;
+  font-size: 14px;
+  padding: 1px;
   cursor: pointer;
 }
 .nav.visible-sm.visible-xs {
