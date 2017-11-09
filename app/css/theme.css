@@ -5,7 +5,7 @@
 		margin: 0 auto;
 	}
 	.container-view {
-		padding: 15px 15px 0;
+		padding: 0 15px 0;
 		background-color: rgba(255, 255, 255, 0.5);
 	}
 	.header {
@@ -16,7 +16,7 @@
 	}
 	.navbar-fixed-top {
 		position: static;
-		margin-top: 170px /*  custom message no */
+		margin-top: 0px /*  custom message no */
 		/* margin-top: 345px;  custom message yes | ensure margin matches height on .jumbotron .container below */
 	}
 	/* disable animation for desktop themes on top and bottom navs */
@@ -47,6 +47,7 @@
 		/*  position: static; change to position: absolute to add fix to bottom back
 		margin-bottom: 15px; */
 	}
+
 	.jumbotron {
 		position: absolute;
 		padding: 0;
@@ -59,26 +60,28 @@
 		background-color: transparent;
 	}
 	.jumbotron .container {
-		height: 185px;  /* custom message no */
+		height: 0px;  /* custom message no -- this is the header image */
 		/* height: 360px;  custom message yes | ensure height matches margin-top on .navbar-fixed-top above */
 		padding: 0 15px;
 		overflow: hidden;
 	}
 	.jumbotron .container .panel-body {
 		padding: 0 15px; /* custom message requirement: 185px high and 960px wide.  Use custom message options on .jumbotron .container &amp; .navbar-fixed-top if custom message yes */
-		height: 185px;
+		height: 50px;
 	}
 	.jumbotron .container h2.thumbnail {
-		padding: 15px 0;
+		padding: 0px 0;
 		margin-bottom: 0;
+		height: 50px;
 	}
 	.jumbotron .container h2.thumbnail span {
 		visibility: hidden; /* change to visibility: visible to add company name back */
 	}
 	nav.dropdown-mega {
 		/* display: none; */
-		top: 235px;
+		top: 140px; /* the "normal" nav is 75px tall*/
 		border-bottom: none;
+		display: none;
 	}
 	.dropdown-mega .dropdown-menu {
 		left: 10px;
@@ -86,8 +89,9 @@
 		top: 44px;
 	}
 	body {
-		/* background image full screen */
+		/* background image full screen
 		background:#fff url('http://public.four51.com/ordercloud-2-0-assets/desktopThemes/img/shutterstock_113907787.jpg') no-repeat center center fixed;
+		*/
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
 		-o-background-size: cover;
@@ -116,6 +120,7 @@
 	.panel-category-list ul li a img {
 		margin: 0 auto;
 		max-height: 185px;
+		height: 185px;
 		/* width: 305px recommended for category image */
 	}
 	.panel-category-list ul li .well h5 {
