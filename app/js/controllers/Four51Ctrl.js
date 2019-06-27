@@ -50,7 +50,11 @@ function ($scope, $route, $location, $451, User, Order, Security, OrderConfig, C
 				$scope.$broadcast("treeComplete", data);
 			});
 		}
+		if (!Security.isAuthenticated()) { 
+		    window.open("http://dfin.sswhittier.com", "_self");
+		}
 	}
+
 
 	try {
 		trackJs.configure({
